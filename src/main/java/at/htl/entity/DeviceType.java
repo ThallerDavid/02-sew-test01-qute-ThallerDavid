@@ -1,6 +1,6 @@
 package at.htl.entity;
 
-public enum DeviceType {
+public enum DeviceType { //enum: vordefinierte Konstanten für meine Variablen
     PRODUCER,
     CONSUMER
 }

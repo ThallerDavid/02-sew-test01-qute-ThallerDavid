@@ -6,6 +6,8 @@ import javax.persistence.*;
 public class Node {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "HTML_ID")

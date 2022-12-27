@@ -4,8 +4,8 @@ import javax.persistence.*;
 
 
 public class LineConfig {
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "CSS_CLASS")

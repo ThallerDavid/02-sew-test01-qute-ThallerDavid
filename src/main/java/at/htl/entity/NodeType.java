@@ -3,10 +3,13 @@ package at.htl.entity;
 import javax.persistence.*;
 
 
+@Entity
+
 @Table(name = "NODE_TYPE")
 public class NodeType {
 
     @Column(name = "DESC_ENG")
+    @Id
     private String descEng;
     @Column(name = "DESC_GER")
     private String descGer;

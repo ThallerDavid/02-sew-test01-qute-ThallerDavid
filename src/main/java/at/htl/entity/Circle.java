@@ -1,11 +1,13 @@
 package at.htl.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
-
+@NamedQueries({
+        @NamedQuery(
+                name = "Circle.getByName", query = "from Circle where htmlName like ?1"
+        )
+})
+@Entity
 public class Circle extends Node {
 
     private int xPos;
@@ -16,6 +18,8 @@ public class Circle extends Node {
     private int strokeWidth;
 
     private String stroke;
+    @Id
+    private Long id;
 
     public Circle(String htmlId,
                   String htmlName,
@@ -102,5 +106,13 @@ public class Circle extends Node {
     @Override
     public String toString() {
         return super.toString() + " (Circle)";
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
