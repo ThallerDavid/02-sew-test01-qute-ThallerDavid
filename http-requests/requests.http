@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/svg
+Content-Type: application/json
+
+{
+  "html_id": "solar-panel",
+  "x_pos": 200,
+  "y_pos": 100
+}
+
+###
